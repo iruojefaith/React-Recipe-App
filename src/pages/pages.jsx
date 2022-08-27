@@ -1,13 +1,18 @@
-import React from 'react'
-import Home from "./Home.jsx"
-function pages() {
+import React from 'react';
+import Home from "./Home.jsx";
+import Cuisine from './Cuisine.jsx';
+import { Route, Routes } from "react-router-dom";
+
+
+function Pages() {
   return (
-    <div>
-        <Home />
 
-    </div>
+      <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/cuisine/:type" element={<Cuisine />} />
+    </Routes>
 
-  )
+  );
 }
 
-export default pages;
+export default Pages;
